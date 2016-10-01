@@ -1,0 +1,806 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - @localhost" uuid="38e01f2e-a573-41b4-b40a-d15c96ec4679">
+    <database-info product="MySQL" version="5.6.28-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.4">
+      <schema id="1" name="car_manage"/>
+      <table id="2" parent="1" name="car_info"/>
+      <table id="3" parent="1" name="customer"/>
+      <table id="4" parent="1" name="order_detail"/>
+      <table id="5" parent="1" name="order_info"/>
+      <table id="6" parent="1" name="purchase_order"/>
+      <table id="7" parent="1" name="salesman"/>
+      <table id="8" parent="1" name="staff_info"/>
+      <table id="9" parent="1" name="supplier"/>
+      <table id="10" parent="1" name="system_menu"/>
+      <table id="11" parent="1" name="system_parameter"/>
+      <table id="12" parent="1" name="system_role"/>
+      <table id="13" parent="1" name="system_role_right"/>
+      <table id="14" parent="1" name="system_staff_role"/>
+      <table id="15" parent="1" name="warehouse"/>
+      <column id="16" parent="2" name="id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="17" parent="2" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="18" parent="2" name="car_brand">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="19" parent="2" name="car_code">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="20" parent="2" name="car_color">
+        <mandatory>1</mandatory>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="21" parent="2" name="car_type">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="22" parent="2" name="create_user">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="23" parent="2" name="date_created">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="24" parent="2" name="fuel_consumption">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="25" parent="2" name="inventory">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="26" parent="2" name="last_updated">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="27" parent="2" name="memo">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="28" parent="2" name="price">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="29" parent="2" name="update_user">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="30" parent="2" name="warehouse_id">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <index id="31" parent="2" name="FK_apqlkgvsb0jl2gbv2uexxk1ku">
+        <columns>warehouse_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="32" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="33" parent="2" name="FK_apqlkgvsb0jl2gbv2uexxk1ku">
+        <columns>warehouse_id</columns>
+        <ref-key>~.warehouse.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="34" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="35" parent="3" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="36" parent="3" name="address">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="37" parent="3" name="birthday">
+        <data-type>date</data-type>
+      </column>
+      <column id="38" parent="3" name="create_user">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="39" parent="3" name="date_created">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="40" parent="3" name="education">
+        <mandatory>1</mandatory>
+        <data-type>smallint(6)</data-type>
+      </column>
+      <column id="41" parent="3" name="email">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="42" parent="3" name="identity_card">
+        <mandatory>1</mandatory>
+        <data-type>varchar(18)</data-type>
+      </column>
+      <column id="43" parent="3" name="is_member">
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="44" parent="3" name="last_update">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="45" parent="3" name="memo">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="46" parent="3" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="47" parent="3" name="sex">
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="48" parent="3" name="telephone">
+        <mandatory>1</mandatory>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="49" parent="3" name="update_user">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="50" parent="3" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="51" parent="4" name="id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="52" parent="4" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="53" parent="4" name="car_info_id">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="54" parent="4" name="create_user">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="55" parent="4" name="date_created">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="56" parent="4" name="last_update">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="57" parent="4" name="memo">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="58" parent="4" name="number">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="59" parent="4" name="order_info_id">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="60" parent="4" name="single_price">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="61" parent="4" name="total_price">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="62" parent="4" name="update_user">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <index id="63" parent="4" name="FK_780rbo1b6fo21dqhiw0fm1826">
+        <columns>order_info_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="64" parent="4" name="FK_kvshqq6qlm51s6r5twsd7sea3">
+        <columns>car_info_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="65" parent="4" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="66" parent="4" name="FK_780rbo1b6fo21dqhiw0fm1826">
+        <columns>order_info_id</columns>
+        <ref-key>~.order_info.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="67" parent="4" name="FK_kvshqq6qlm51s6r5twsd7sea3">
+        <columns>car_info_id</columns>
+        <ref-key>~.car_info.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="68" parent="5" name="id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="69" parent="5" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="70" parent="5" name="create_user">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="71" parent="5" name="customer_id">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="72" parent="5" name="date_created">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="73" parent="5" name="last_update">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="74" parent="5" name="memo">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="75" parent="5" name="order_code">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="76" parent="5" name="order_time">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="77" parent="5" name="out_time">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="78" parent="5" name="sale_number">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="79" parent="5" name="salesman_id">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="80" parent="5" name="total_price">
+        <data-type>double</data-type>
+      </column>
+      <column id="81" parent="5" name="update_user">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <index id="82" parent="5" name="FK_29s3ss5nfycolst7w8w22ihjo">
+        <columns>customer_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="83" parent="5" name="FK_m599xoym6mna1il6v2259fj99">
+        <columns>salesman_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="84" parent="5" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="85" parent="5" name="FK_29s3ss5nfycolst7w8w22ihjo">
+        <columns>customer_id</columns>
+        <ref-key>~.customer.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="86" parent="5" name="FK_m599xoym6mna1il6v2259fj99">
+        <columns>salesman_id</columns>
+        <ref-key>~.salesman.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="87" parent="6" name="id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="88" parent="6" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="89" parent="6" name="car_info_id">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="90" parent="6" name="car_number">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="91" parent="6" name="create_user">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="92" parent="6" name="date_created">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="93" parent="6" name="last_updated">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="94" parent="6" name="memo">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="95" parent="6" name="order_code">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="96" parent="6" name="order_time">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="97" parent="6" name="single_price">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="98" parent="6" name="storage_status">
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="99" parent="6" name="storage_time">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="100" parent="6" name="supplier_id">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="101" parent="6" name="total_price">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="102" parent="6" name="update_user">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <index id="103" parent="6" name="FK_blm0rj391ih5y8y6kcu9vffh">
+        <columns>car_info_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="104" parent="6" name="FK_dgil1aiqhau54y5giflc3806n">
+        <columns>supplier_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="105" parent="6" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="106" parent="6" name="FK_blm0rj391ih5y8y6kcu9vffh">
+        <columns>car_info_id</columns>
+        <ref-key>~.car_info.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="107" parent="6" name="FK_dgil1aiqhau54y5giflc3806n">
+        <columns>supplier_id</columns>
+        <ref-key>~.supplier.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="108" parent="7" name="id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="109" parent="7" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="110" parent="7" name="birthday">
+        <data-type>date</data-type>
+      </column>
+      <column id="111" parent="7" name="create_user">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="112" parent="7" name="date_created">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="113" parent="7" name="email">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="114" parent="7" name="last_update">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="115" parent="7" name="phone">
+        <data-type>varchar(16)</data-type>
+      </column>
+      <column id="116" parent="7" name="real_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="117" parent="7" name="sex">
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="118" parent="7" name="staff_code">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="119" parent="7" name="telephone">
+        <mandatory>1</mandatory>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="120" parent="7" name="update_user">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="121" parent="7" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="122" parent="8" name="id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="123" parent="8" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="124" parent="8" name="create_user">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="125" parent="8" name="date_created">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="126" parent="8" name="email">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="127" parent="8" name="last_update">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="128" parent="8" name="password">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="129" parent="8" name="phone">
+        <mandatory>1</mandatory>
+        <data-type>varchar(16)</data-type>
+      </column>
+      <column id="130" parent="8" name="real_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="131" parent="8" name="staff_code">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="132" parent="8" name="telephone">
+        <mandatory>1</mandatory>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="133" parent="8" name="update_user">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="134" parent="8" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="135" parent="9" name="id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="136" parent="9" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="137" parent="9" name="address">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="138" parent="9" name="contacts_email">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="139" parent="9" name="contacts_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="140" parent="9" name="contacts_telephone">
+        <mandatory>1</mandatory>
+        <data-type>varchar(16)</data-type>
+      </column>
+      <column id="141" parent="9" name="create_user">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="142" parent="9" name="date_created">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="143" parent="9" name="description">
+        <data-type>varchar(500)</data-type>
+      </column>
+      <column id="144" parent="9" name="last_update">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="145" parent="9" name="licence_number">
+        <data-type>varchar(15)</data-type>
+      </column>
+      <column id="146" parent="9" name="memo">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="147" parent="9" name="supplier_code">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="148" parent="9" name="supplier_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="149" parent="9" name="telephone">
+        <mandatory>1</mandatory>
+        <data-type>varchar(16)</data-type>
+      </column>
+      <column id="150" parent="9" name="update_user">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="151" parent="9" name="zipcode">
+        <data-type>varchar(8)</data-type>
+      </column>
+      <key id="152" parent="9" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="153" parent="10" name="id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="154" parent="10" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="155" parent="10" name="create_user">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="156" parent="10" name="date_created">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="157" parent="10" name="last_updated">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="158" parent="10" name="menu_icon">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="159" parent="10" name="menu_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="160" parent="10" name="menu_url">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="161" parent="10" name="parent_menu">
+        <data-type>varchar(36)</data-type>
+      </column>
+      <column id="162" parent="10" name="root_path">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="163" parent="10" name="update_user">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="164" parent="10" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="165" parent="11" name="id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="166" parent="11" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="167" parent="11" name="create_user">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="168" parent="11" name="date_created">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="169" parent="11" name="description">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="170" parent="11" name="last_update">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="171" parent="11" name="parameter_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="172" parent="11" name="parameter_value">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="173" parent="11" name="update_user">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="174" parent="11" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="175" parent="12" name="id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="176" parent="12" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="177" parent="12" name="create_user">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="178" parent="12" name="date_created">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="179" parent="12" name="description">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="180" parent="12" name="last_update">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="181" parent="12" name="role_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="182" parent="12" name="update_user">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="183" parent="12" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="184" parent="13" name="id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="185" parent="13" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="186" parent="13" name="create_user">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="187" parent="13" name="date_created">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="188" parent="13" name="last_updated">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="189" parent="13" name="system_menu_id">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="190" parent="13" name="system_role_id">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="191" parent="13" name="update_user">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <index id="192" parent="13" name="FK_4xlmjt5i1vaxxeustd9qkvret">
+        <columns>system_role_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="193" parent="13" name="FK_tc9qwiknfpwv61tbpqddp754v">
+        <columns>system_menu_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="194" parent="13" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="195" parent="13" name="FK_4xlmjt5i1vaxxeustd9qkvret">
+        <columns>system_role_id</columns>
+        <ref-key>~.system_role.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="196" parent="13" name="FK_tc9qwiknfpwv61tbpqddp754v">
+        <columns>system_menu_id</columns>
+        <ref-key>~.system_menu.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="197" parent="14" name="id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="198" parent="14" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="199" parent="14" name="create_user">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="200" parent="14" name="date_created">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="201" parent="14" name="last_updated">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="202" parent="14" name="staff_info_id">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="203" parent="14" name="system_role_id">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="204" parent="14" name="update_user">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <index id="205" parent="14" name="FK_429ex0m6oux06h4be7le7f686">
+        <columns>system_role_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="206" parent="14" name="FK_gfiv6v62c4evcc9ix3v28hvkx">
+        <columns>staff_info_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="207" parent="14" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="208" parent="14" name="FK_429ex0m6oux06h4be7le7f686">
+        <columns>system_role_id</columns>
+        <ref-key>~.system_role.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="209" parent="14" name="FK_gfiv6v62c4evcc9ix3v28hvkx">
+        <columns>staff_info_id</columns>
+        <ref-key>~.staff_info.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="210" parent="15" name="id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="211" parent="15" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="212" parent="15" name="create_user">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="213" parent="15" name="date_created">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="214" parent="15" name="last_update">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="215" parent="15" name="max_inventory">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="216" parent="15" name="memo">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="217" parent="15" name="now_inventory">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="218" parent="15" name="update_user">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="219" parent="15" name="warehouse_address">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="220" parent="15" name="warehouse_code">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="221" parent="15" name="warehouse_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <key id="222" parent="15" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>
