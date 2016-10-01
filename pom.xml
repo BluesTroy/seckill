@@ -58,8 +58,9 @@
       <!--  使用junit4  -->
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
+      <version>4.12</version>
+      <!--加上scope会报错-->
+      <!--<scope>test</scope>-->
     </dependency>
 
     <!-- 补全项目依赖 -->
