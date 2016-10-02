@@ -6,8 +6,8 @@
 
     <!-- 主键冲突，会报错。用ignore会忽略错误，返回影响的函数为0 -->
     <insert id="insertSuccessKilled">
-        insert ignore into success_killed(seckill_id,user_phone)
-        VALUES (#{seckillId},#{userPhone})
+        insert ignore into success_killed(seckill_id,user_phone,state)
+        VALUES (#{seckillId},#{userPhone},0)
     </insert>
 
     <!--根据id查询SuccessKilled并携带Seckill实体-->
@@ -20,15 +20,15 @@
           sk.user_phone,
           sk.create_time,
           sk.state,
-          s.seckill_id "seckill.seckill_id"
-          s.name "seckill.name"
-          s.number "seckill.number"
-          s.start_time "seckill.start_time"
-          s.end_time "seckill.end_time"
+          s.seckill_id "seckill.seckill_id",
+          s.name "seckill.name",
+          s.number "seckill.number",
+          s.start_time "seckill.start_time",
+          s.end_time "seckill.end_time",
           s.create_time "seckill.create_time"
         FROM success_killed sk
         INNER JOIN seckill s ON sk.seckill_id = s.seckill_id
-        WHERE sk.seckill_id=#{seckillId}
+        WHERE sk.seckill_id=#{seckillId} AND sk.user_phone=${userPhone}
 
 
     </select>

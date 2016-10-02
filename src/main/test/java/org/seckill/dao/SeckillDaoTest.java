@@ -31,6 +31,13 @@ public class SeckillDaoTest {
 
     @org.junit.Test
     public void testReduceNumber() throws Exception {
+        Date killTime = new Date();
+        int updateCount = seckillDao.reduceNumber(1000L, killTime);
+        System.out.println("updateCount=" + updateCount);
+    }
+
+    @org.junit.Test
+    public void testQueryById() throws Exception {
         long id = 1000;
         Seckill seckill = seckillDao.queryById(id);
         System.out.println(seckill.getName());
@@ -39,18 +46,11 @@ public class SeckillDaoTest {
     }
 
     @org.junit.Test
-    public void testQueryById() throws Exception {
+    public void testQueryAll() throws Exception {
         //java没有保存形参的记录：queryAll(int offset,int limit)->queryAll(arg0,arg1)
         List<Seckill> seckills = seckillDao.queryAll(0, 100);
         for (Seckill seckill : seckills) {
             System.out.println(seckill);
         }
-    }
-
-    @org.junit.Test
-    public void testQueryAll() throws Exception {
-        Date killTime = new Date();
-        int updateCount=seckillDao.reduceNumber(1000L,killTime);
-        System.out.println("updateCount="+updateCount);
     }
 }
