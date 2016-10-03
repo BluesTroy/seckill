@@ -24,7 +24,7 @@ http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springfr
     <!-- 3: 配置jsp显示viewResolver -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
-        <property name="prefix" value="/WEB-INF/jsp"/>
+        <property name="prefix" value="/WEB-INF/jsp/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
 
