@@ -39,6 +39,17 @@ public class Exposer {
         this.seckillId = seckillId;
     }
 
+    @Override
+    public String toString() {
+        return "Exposer{" +
+                "exposed=" + exposed +
+                ", md5='" + md5 + '\'' +
+                ", seckillId=" + seckillId +
+                ", now=" + now +
+                ", start=" + start +
+                ", end=" + end +
+                '}';
+    }
 
     public boolean isExposed() {
         return exposed;
