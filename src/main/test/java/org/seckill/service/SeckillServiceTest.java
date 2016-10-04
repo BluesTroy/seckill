@@ -11,6 +11,7 @@ import org.seckill.exception.SeckillCloseException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.support.PagedListHolder;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -94,4 +95,18 @@ public class SeckillServiceTest {
             logger.error(e.getMessage());
         }
     }
+
+    @Test
+    public void testExecuteSeckillProcedure(){
+        long seckillId=1000;
+        long phone = 13813699999L;
+        Exposer exposer=seckillService.exportSeckillUrl(seckillId);
+        if (exposer.isExposed()){
+            String md5 = exposer.getMd5();
+            SeckillExcution excution = seckillService.executeSeckillProcedure(seckillId,phone,exposer.getMd5());
+            logger.info(excution.getStateInfo());
+        }
+    }
+
+
 }

@@ -48,4 +48,10 @@ http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springfr
         <property name="basePackage" value="org.seckill.dao"/>
     </bean>
 
+    <!-- RedisDao-->
+    <bean id="redisDao" class="org.seckill.dao.cache.RedisDao">
+        <constructor-arg index="0" value="localhost"/>
+        <constructor-arg index="1" value="6379"/>
+    </bean>
+
 </beans>
