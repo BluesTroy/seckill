@@ -40,5 +40,13 @@
         <servlet-name>seckill-dispatcher</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
+
+    <!-- 配置默认首页 -->
+    <!-- 不配置首页，则web服务器就知道，不需要他来处理，而是由程序自己处理-->
+    <!-- 在spring-web.xml中配置如下 -->
+    <!--<mvc:view-controller path="/" view-name="redirect:/seckill/list"/>-->
+    <welcome-file-list>
+        <welcome-file></welcome-file>
+    </welcome-file-list>
 </web-app>
         

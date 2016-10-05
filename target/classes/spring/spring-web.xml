@@ -30,4 +30,6 @@ http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springfr
 
     <!-- 4：扫描web相关的bean-->
     <context:component-scan base-package="org.seckill.web"/>
+
+    <mvc:view-controller path="/" view-name="redirect:/seckill/list"/>
 </beans>
